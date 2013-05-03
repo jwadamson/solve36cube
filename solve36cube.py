@@ -48,7 +48,7 @@ def test_color(pos, solution, used_towers, color, size):
  # special conditions for the two special towers
  if FORCE_TRICK and (pos/6, pos%6) == (1,2) and color != 2: return False
  if FORCE_TRICK and (pos/6, pos%6) == (3,2) and color != 4: return False
- #PYOBRG - force color ordering for first row (colors are interchangable except yellow & orange)
+ #PYOBRG - force color ordering for first row (colors are interchangable except yellow & orange, which are only partially interchangable with each other)
  if UNIQUE:
   if pos == 0 and color != 1 : return False
   if pos == 1 and not (color == 2 or color == 4): return False
